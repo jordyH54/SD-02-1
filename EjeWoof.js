@@ -1,4 +1,8 @@
-for (let i = 1; i <= 105; i++) {
+const prompt = require("prompt-sync")();
+
+const cantidad = parseInt(prompt("¿Cuántos números deseas imprimir? "));
+
+for (let i = 1; i <= cantidad; i++) {
   let resultado = "";
 
   if (i % 3 === 0) {
@@ -12,10 +16,11 @@ for (let i = 1; i <= 105; i++) {
   if (i % 7 === 0) {
     resultado += "Woof";
   }
-//si el resultado esta vacio imprime el numero
+
+  // si el resultado está vacío imprime el número
   if (resultado === "") {
     console.log(i);
-//si no imprime el texto
+  // si no imprime el texto
   } else {
     console.log(resultado);
   }
